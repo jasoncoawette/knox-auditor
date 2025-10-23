@@ -21,10 +21,5 @@ COPY . .
 # Expose port (Railway provides $PORT)
 EXPOSE 8080
 
-# Run Streamlit
-CMD streamlit run streamlit_app.py \
-    --server.port=$PORT \
-    --server.address=0.0.0.0 \
-    --server.headless=true \
-    --server.enableCORS=false \
-    --server.enableXsrfProtection=false
+# Run Streamlit with shell form to expand environment variables
+CMD ["sh", "-c", "streamlit run streamlit_app.py --server.port=${PORT:-8080} --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false"]
