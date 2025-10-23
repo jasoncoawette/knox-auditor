@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment files
+.env
+*.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+.claude/
+.streamlit/
+*.swp
+*.swo
+
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# Documentation and reports
+reports/
+*.log
+*.html
+*.mp3
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+tests/
+*.test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Other
+*.md
+LICENSE
+.editorconfig

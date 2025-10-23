@@ -38,6 +38,7 @@ env/
 # Reports
 reports/
 *.json
+!railway.json
 *.html
 *.mp3
 
