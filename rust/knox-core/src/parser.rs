@@ -279,10 +279,10 @@ async def fetch_data(url):
     fn test_python_import_extraction() {
         let parser = CodeParser::new(Some("python".to_string()));
         let code = r#"
-import os
-from pathlib import Path
-from typing import List, Dict
-"#;
+            import os
+            from pathlib import Path
+            from typing import List, Dict
+            "#;
         let imports = parser.extract_imports(code);
         assert!(imports.len() >= 2);
     }

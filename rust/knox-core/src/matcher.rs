@@ -2,7 +2,6 @@
 //!
 //! Uses Aho-Corasick algorithm for efficient multi-pattern matching
 
-use aho_corasick::AhoCorasick;
 use pyo3::prelude::*;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
@@ -96,7 +95,10 @@ impl PatternMatcher {
     pub fn match_line(&mut self, line: &str, line_number: usize) -> Vec<Match> {
         let mut matches = Vec::new();
 
-        for pattern in &self.patterns {
+        // Clone patterns to avoid borrow checker issues
+        let patterns = self.patterns.clone();
+
+        for pattern in &patterns {
             if let Some(regex) = self.get_or_compile_regex(&pattern.pattern) {
                 if let Some(capture) = regex.find(line) {
                     matches.push(Match {

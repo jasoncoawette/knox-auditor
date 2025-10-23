@@ -19,6 +19,9 @@ walkdir = "2.4"
 memmap2 = "0.9"
 aho-corasick = "1.1"
 
+[dev-dependencies]
+tempfile = "3.8"
+
 [profile.release]
 opt-level = 3
 lto = true
