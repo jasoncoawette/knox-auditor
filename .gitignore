@@ -28,6 +28,8 @@ ENV/
 env/
 
 # IDE
+.claude
+.streamlit
 .vscode/
 .idea/
 *.swp
