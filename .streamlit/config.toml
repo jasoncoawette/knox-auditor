@@ -7,9 +7,8 @@ font = "monospace"
 
 [server]
 headless = true
-port = 8501
-enableCORS = true
-enableXsrfProtection = true
+enableCORS = false
+enableXsrfProtection = false
 
 [browser]
 gatherUsageStats = false
